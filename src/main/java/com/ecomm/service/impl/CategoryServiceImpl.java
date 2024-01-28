@@ -3,10 +3,13 @@ package com.ecomm.service.impl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.ecomm.entity.Category;
 import com.ecomm.repositories.CategoryRepository;
 import com.ecomm.service.CategoryService;
 
+@Service
 public class CategoryServiceImpl implements CategoryService{
 
 	private final CategoryRepository repository;

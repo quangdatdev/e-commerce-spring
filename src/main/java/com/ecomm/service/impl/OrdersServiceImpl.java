@@ -3,10 +3,13 @@ package com.ecomm.service.impl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.ecomm.entity.Orders;
 import com.ecomm.repositories.OrderRepository;
 import com.ecomm.service.OrderService;
 
+@Service
 public class OrdersServiceImpl implements OrderService{
 
 	private final OrderRepository repository;

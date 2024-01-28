@@ -3,10 +3,13 @@ package com.ecomm.service.impl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.ecomm.entity.Customer;
 import com.ecomm.repositories.CustomerRepository;
 import com.ecomm.service.CustomerService;
 
+@Service
 public class CustomerServiceImpl implements CustomerService{
 
 	private final CustomerRepository repository;

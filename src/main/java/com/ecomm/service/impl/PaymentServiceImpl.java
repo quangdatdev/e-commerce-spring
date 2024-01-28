@@ -3,10 +3,13 @@ package com.ecomm.service.impl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.ecomm.entity.Payment;
 import com.ecomm.repositories.PaymentRepository;
 import com.ecomm.service.PaymentService;
 
+@Service
 public class PaymentServiceImpl implements PaymentService{
 
 	private final PaymentRepository repository;

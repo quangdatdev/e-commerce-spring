@@ -3,10 +3,13 @@ package com.ecomm.service.impl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.ecomm.entity.Cart;
 import com.ecomm.repositories.CartRepository;
 import com.ecomm.service.CartService;
 
+@Service
 public class CartServiceImpl implements CartService{
 
 	private final CartRepository repository;

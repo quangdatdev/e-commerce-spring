@@ -3,10 +3,13 @@ package com.ecomm.service.impl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.ecomm.entity.Product;
 import com.ecomm.repositories.ProductRepository;
 import com.ecomm.service.ProductService;
 
+@Service
 public class ProductServiceImpl implements ProductService{
 
 	private final ProductRepository repository;
