@@ -16,21 +16,16 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Orders {
+public class Payment {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long order_id;
-	
-	private Date order_date;
-	private double total_price;
+	private Long payment_id;
+	private Date payment_date;
+	private String payment_method;
+	private double amount;
 	
 	@ManyToOne
-	@JoinColumn(name = "customer_id")
+	@JoinColumn(name="customer_id")
 	private Customer customer;
-	
-	@ManyToOne
-	@JoinColumn(name = "payment_id")
-	private Payment payment; 
-	
 }
