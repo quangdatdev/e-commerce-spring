@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Payment {
+public class PaymentDto {
 
 	private Long payment_id;
 	private Date payment_date;
 	private String payment_method;
 	private double amount;
-	private Customer customer;
+	private CustomerDto customer;
 }

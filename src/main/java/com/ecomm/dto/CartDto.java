@@ -7,8 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Category {
+public class CartDto {
 
-	private Long category_id;
-	private String name;
+	private Long cart_id;
+	private int quantity;
+	
+	private ProductDto product;
+	
+	private CustomerDto customer;
 }

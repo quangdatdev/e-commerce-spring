@@ -9,15 +9,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Orders {
+public class OrdersDto {
 
 	private Long order_id;
 	
 	private Date order_date;
 	private double total_price;
 	
-	private Customer customer;
+	private CustomerDto customer;
 	
-	private Payment payment; 
+	private PaymentDto payment; 
 	
 }
