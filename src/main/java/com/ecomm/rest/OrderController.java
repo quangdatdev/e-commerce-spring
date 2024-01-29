@@ -2,6 +2,7 @@ package com.ecomm.rest;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,11 +19,7 @@ import com.ecomm.service.OrderService;
 @RequestMapping("/api/v1/order")
 public class OrderController {
 
-	private final OrderService service;
-	public OrderController(OrderService service) {
-		super();
-		this.service = service;
-	}
+	@Autowired OrderService service;
 	
 	@GetMapping
 	public List<Orders> getAll(){

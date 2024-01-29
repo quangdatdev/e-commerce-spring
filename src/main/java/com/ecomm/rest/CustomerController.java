@@ -2,6 +2,7 @@ package com.ecomm.rest;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,11 +19,7 @@ import com.ecomm.service.CustomerService;
 @RequestMapping("/api/v1/customer")
 public class CustomerController {
 
-	private final CustomerService service;
-	public CustomerController(CustomerService service) {
-		super();
-		this.service = service;
-	}
+	@Autowired CustomerService service;
 	
 	@GetMapping
 	public List<Customer> getAll(){

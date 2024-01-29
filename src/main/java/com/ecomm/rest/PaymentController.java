@@ -2,6 +2,7 @@ package com.ecomm.rest;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,11 +19,7 @@ import com.ecomm.service.PaymentService;
 @RequestMapping("/api/v1/payment")
 public class PaymentController {
 
-	private final PaymentService service;
-	public PaymentController(PaymentService service) {
-		super();
-		this.service = service;
-	}
+	@Autowired PaymentService service;
 	
 	@GetMapping
 	public List<Payment> getAll(){
